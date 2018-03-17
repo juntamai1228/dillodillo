@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="Keywords" content="DilloDillo,ディロディロ,portfolio,ポートフォリオ,webデザイン" />
+<meta name="description" content="DilloDillo -ディロディロ- ポートフォリオサイト" />
+<meta name="robots" content="index,follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>DilloDillo</title>
+<link rel="shortcut icon" href="images_pf/favicon.ico" />
+<link rel="stylesheet" href="css/style_po.css">
+<link href="https://fonts.googleapis.com/css?family=Jockey+One" rel="stylesheet">
+<link rel="stylesheet" href="meanmenu.css" />
+<link rel="stylesheet" href="src/css/swipebox.css">
+</head>
+
+<body>
+<header id="header">
+<div id="head_navi">
+<h1><a href="index.html">Dillo<br />Dillo</a></h1>
+<nav>
+  <ul id="top_navi">
+    <li><a href="portfolio_web.html">Web</a></li>	
+    <li><a href="portfolio_graphic.html">Graphic &amp; Editorial</a></li>	
+    <li><a href="portfolio_other.html">OtherWork</a></li>	
+    <li><a href="portfolio_profile.html">Profile &amp; Contact</a></li>
+  </ul>
+</nav>
+</div><!--head_navi-->
+</header><!--header-->
+
+<p style="clear:both; margin-bottom:40px;">&nbsp;</p>
+
+<div id="wrapper" >
+<h2 class="category_text_top">Hello<br />I am a graphic &amp;  web designer<br />may be...</h2>
+<p class="category_text">This is my portforio site.</p>
+<p class="category_text">Thank you for coming.</p>
+</div><!--wrapper-->
+
+<div id="footer">
+<p class="footer_text">Copyright (c) 2012 DilloDillo, All Rights Reserved.</p>
+</div>
+
+<!--totop-->
+<div id="wrap">
+	<p id="back-top"><a href="#header">Page Top</a></p>
+</div><!--wrap-->
+<!--totop-->
+
+<script src="lib/ios-orientationchange-fix.js"></script>
+<script src="lib/jquery-2.1.0.min.js"></script>
+<script src="src/js/jquery.swipebox.js"></script>
+<script>//swipebox
+$( document ).ready(function() {
+		$( '.swipebox' ).swipebox();
+  });
+</script>
+<script>//スクロールページトップへ
+$(function () {
+		$("#back-top").hide();//初期は非表示
+    $(window).scroll(function () { 
+        if ($(this).scrollTop() > 200) {
+            $('#back-top').fadeIn();
+        } else {
+            $('#back-top').fadeOut();
+        }
+    });
+    //ここからクリックイベント
+    $('#back-top a').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+<script src="jquery.meanmenu.js"></script>
+<script>//レスポンスメニュー表示
+$(document).ready(function() {
+$('nav').meanmenu();
+});
+</script>
+
+</body>
+</html>
